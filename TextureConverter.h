@@ -17,12 +17,24 @@ private:
 
 	static std::wstring ConvertMultiByteStringToWideString(const std::string& mString);
 
+	void SeparateFilePath(const std::wstring& filePath);
+
+	void SaveDDSTextureToFile();
+
 private:
 
-	////画像の情報
-	//DirectX::TexMetadata matadata_;
-	////画像イメージのコンテナ
-	//DirectX::ScratchImage scratchImage_;
+	//画像の情報
+	DirectX::TexMetadata matadata_;
+	//画像イメージのコンテナ
+	DirectX::ScratchImage scratchImage_;
+
+private:
+
+	std::wstring directoryPath_;
+
+	std::wstring fileName_;
+
+	std::wstring fileExt_;
 
 
 };
